@@ -11,13 +11,104 @@ Tags: advocacia, justiça, advogado
 
 *, *::before, *::after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 
+*{
+    font-family: 'Charm', cursive;
+    text-decoration: none;
+    
+}
+
 body{
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-@media only screen and (max-width: 480px){
+.home, .Artigos, .Palestras{
+    height: 100vh;
+}
+
+.home, .Palestras{
+    background: #1F1C1C;
+}
+
+.Artigos{
+    background: #525252;
+}
+
+.footer{
+    background: black;
+    height: 80vh;
+    color: white;
+   
+}
+
+.FooterTitulo{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.FooterInformacoes{
+    font-size: large;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 2vh;
+}
+
+.AreaPrincipal{
+    color: white;
+}
+
+.Barra{
+    height: 2vh;
+    width: 18vw;
+    background: #FAA514;
+}
+
+.RedeSocial .Barra{
+    width: 32vw;
+}
+
+.Endereco p, .Endereco h2,
+.Atendimento p, .Atendimento h2,
+.RedeSocial p, .RedeSocial h2{
+    display: flex;
+    justify-content: center; 
+}
+
+.LogoMarca{
+    margin-left: 1vh;
+    display: inline;
+    
+}
+
+.MenuSup{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw; 
+}
+
+.MenuSup a{
+    color: white;
+}
+
+.Telefone{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background: white;
+}
+
+.TopFaixa{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* @media only screen and (max-width: 480px){
     .TopFaixa{
         float: left;
         width: 100%;
@@ -113,15 +204,15 @@ body{
         width: 100%;
         height: 150px;
         background: #1F1B1B;
-    }
+    } */
     
     .MidFaixaVerde{
         margin-left: 0;
-        margin-right: 0px !important;
+        margin-right: 0px;
         display: flex;
         align-items: center;
         width: 100%;
-        height: 45px;
+        height: 5vh;
         box-shadow: 0px 5px 20px 0px;
         background:  #018B2F;
          
@@ -129,14 +220,13 @@ body{
 
     .MidFaixaAmarelo{
         margin-left: 0;
-        margin-right: 0px !important;
+        margin-right: 0px ;
         display: flex;
         width: 100%;
-        height: 15px;
+        height: 2vh;
         background:#FFD900;
          
     }
     
     
 
-}
