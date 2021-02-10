@@ -21,23 +21,57 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.home, .Artigos, .Palestras{
-    height: 100vh;
+.TelaCheia{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
 }
 
-.home, .Palestras{
+main, #Artigos, #Palestras{
+    height: 110vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+} 
+
+header{
+    position: fixed;
+    width: 100%;
+}
+
+header, #Palestras{
     background: #1F1C1C;
 }
 
-.Artigos{
-    background: #525252;
+/*Menus do topo*/
+
+.MenuHome .Barra, 
+.MenuArtigos .Barra,
+.MenuPalestras .Barra {
+    width: auto;
 }
+
+.MenuHome, .MenuArtigos, .MenuPalestras {
+    margin: 2rem;
+}
+
+#Artigos{
+    background: #525252;
+    width: 100%;
+}
+
+
 
 .footer{
     background: black;
-    height: 80vh;
+    height: 100%;
     color: white;
    
 }
@@ -48,11 +82,26 @@ body{
     font-size: x-large;
 }
 
-.FooterInformacoes{
+#FooterInformacoes{
     font-size: large;
     display: flex;
     justify-content: space-evenly;
     margin: auto 2vh;
+}
+
+/* .RedeSocialImages{
+    display: flex;
+    align-items: center; 
+} */
+
+.RedeSocialImages img{
+    /* height: 22vh; */
+    width: 10vw;
+    margin: 1vw;
+}
+.RedeSocialCima, .RedeSocialBaixo{
+    display: flex;
+    justify-content: center;
 }
 
 .AreaPrincipal h1{
@@ -67,7 +116,7 @@ body{
 }
 
 .Barra{
-    height: 2vh;
+    height: 1vh;
     width: 18vw;
     background: #FAA514;
 }
@@ -91,23 +140,26 @@ body{
 
 .MenuSup{
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
-    width: 20vw; 
+    
 }
 
 .MenuSup a{
     font-size: 2em;
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .Telefone{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    background: white;
+    align-items: center; 
+}
+
+.Telefone img{
+    height: 22vh;
+    width: 10vw;
 }
 
 .TopFaixa{
@@ -115,102 +167,19 @@ body{
     justify-content: space-between;
 }
 
-.PaginaInicial{
+#PaginaInicial{
     display: flex;
     align-items: center;
+    margin-top: auto;
 }
 
 .LogoBalanca img{
     display: flex;
     justify-content: space-evenly;
-    height: 325px;
-    width: 336px;
+    width: 50%;
     margin: 60px;
 
 }
-
-@media only screen and (max-width: 480px){
-    .MenuSup{
-        display: none;
-    }
-    .BotaoMobile{
-        /* position:absolute; */
-        top: 10px;
-        left: 5%;
-        z-index: 20;
-    }
-
-    .BotaoMobile img{
-        margin: 20px 20px 20px 20px;
-    }
-
-    /*footer*/
-    .FooterTitulo{
-        font-size: large;
-    }
-
-    .FooterInformacoes{
-        display: block;
-    }
-    
-    .Barra{
-        margin: auto auto;
-        width: 53vw;
-    }
-
-    .RedeSocial .Barra{
-        width: 90vw;
-    }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 768px){
-    .MenuSup{
-        display: none;
-    }
-
-    .BotaoMobile{
-        /* position:absolute; */
-        top: 10px;
-        left: 5%;
-        z-index: 20;
-    }
-
-    .BotaoMobile img{
-        margin: 20px 20px 20px 20px;
-    }
-
-    /*footer*/
-    .FooterTitulo{
-        font-size: large;
-    }
-
-    .FooterInformacoes{
-        display: block;
-    }
-    
-    .Barra{
-        margin: auto auto;
-        width: 53vw;
-    }
-
-    .RedeSocial .Barra{
-        width: 90vw;
-    }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1199px){
-    .BotaoMobile{
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 1200px){
-    .BotaoMobile{
-        display: none;
-    }
-         
-}
-
 
 .MidFaixaVerde{
     margin-left: 0;
@@ -232,4 +201,182 @@ body{
     height: 2vh;
     background:#FFD900;
      
+}
+
+
+/*PALESTRAS*/
+#Palestras{
+    color: white;
+}
+.PalestrasVideo{
+    display: flex;
+    justify-content: center;
+}
+
+.PalestrasTitulo{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.VideoPrincipal{
+    
+
+}
+
+.ListaVideos{
+    display: grid;
+    margin-left: 5vw;
+}
+
+.BotaoProximo{
+    display: flex;
+    align-items: flex-end;
+}
+
+.BotaoProximo button{
+    background: #faa514;
+    border: none;
+    color: white;
+}
+@media only screen and (max-width: 480px){
+    body{
+        width: 100% !important;
+    }
+    
+    /*PAGINA INICIAL*/
+    #PaginaInicial{
+        margin-top: 70vh;
+        height: 124vh;
+        background: #1F1C1C;
+    }
+    
+    .AreaPrincipal h1{
+        font-size: 2rem;
+    }
+
+    .MenuSup{
+        display: none;
+    }
+    .BotaoMobile{
+        /* position:absolute; */
+        top: 10px;
+        left: 5%;
+        z-index: 20;
+    }
+
+    .BotaoMobile img{
+        margin: 20px 20px 20px 20px;
+    }
+
+    .LogoBalanca{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    /*PALESTRAS*/
+    .ListaVideos{
+        display: flex;
+        align-items: baseline;
+    }
+
+    /*footer*/
+    .FooterTitulo{
+        font-size: large;
+    }
+
+    #FooterInformacoes{
+        display: block;
+    }
+    
+    .Barra{
+        margin: auto auto;
+        width: 53vw;
+    }
+
+    .RedeSocial .Barra{
+        width: 90vw;
+    }
+
+    #PaginaInicial{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    body{
+        width: 100%;
+    }
+
+    .MenuSup{
+        display: none;
+    }
+
+    .BotaoMobile{
+        /* position:absolute; */
+        top: 10px;
+        left: 5%;
+        z-index: 20;
+    }
+
+    .BotaoMobile img{
+        margin: 20px 20px 20px 20px;
+    }
+
+    /*footer*/
+    .FooterTitulo{
+        font-size: large;
+    }
+
+    #FooterInformacoes{
+        display: block;
+    }
+    
+    .Barra{
+        margin: auto auto;
+        width: 53vw;
+    }
+
+    .RedeSocial .Barra{
+        width: 90vw;
+    }
+
+    #PaginaInicial{
+        display: block;
+    }
+    
+    /* span{
+        display: flex;
+        justify-content: center;
+    } */
+
+    .LogoBalanca img {
+        display: flex;
+        justify-content: space-evenly;
+        height: 60vh;
+        width: 82vw;
+        margin: 60px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px){
+    body{
+        width: 100%;
+    }
+
+    .BotaoMobile{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    body{
+        width: 100%;
+    }
+
+    .BotaoMobile{
+        display: none;
+    }
+         
 }
